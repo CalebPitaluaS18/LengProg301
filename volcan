@@ -1,0 +1,22 @@
+{Caleb Leonardo Pitalúa Salazar}
+program volcan;
+uses crt;
+var
+  anchoMax: integer;
+  ast: integer;
+  i: integer;
+begin
+  clrscr;
+  anchoMax := 64;
+  ast := 2; 
+  while ast <= anchoMax do
+  begin
+    for i := 1 to (anchoMax - ast) div 2 do {espacios para centrar la piramide}
+      write(' ');
+    for i := 1 to ast do {linea de asteriscos}
+      write('*');
+    writeln;
+    ast := ast * 2;  {la linea siguiente se duplica}
+  end;
+  readln;
+end.
