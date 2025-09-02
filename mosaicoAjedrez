@@ -1,0 +1,21 @@
+{ Caleb Leonardo Pitalua Salazar }
+	program mosaicoAjedrez;
+	uses crt;
+	const
+	  nFilas = 8;
+	var
+	  x: integer;
+	  y: integer;
+	begin
+	  clrscr;
+	  for y := 1 to nFilas do
+		begin
+			if (y + x) mod 2 = 0 then {si la suma es par se escribe el asterisco, sino, un espacio}
+				write ('*')
+			else
+				write (' ');
+		end;
+		writeln;
+	end;
+	readln;
+end.
