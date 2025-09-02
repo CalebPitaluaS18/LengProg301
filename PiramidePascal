@@ -1,0 +1,42 @@
+{ Caleb Leonardo Pitalua Salazar }
+Program piramide;
+
+var
+    n, ind, cont: integer;
+    fila: array[1..19] of integer;
+
+begin
+    for n := 1 to 10 do
+    begin
+        cont := 0;
+
+        { Parte ascendente de la fila }
+        for ind := 0 to (n-1) do
+        begin
+            fila[cont] := (n + ind) mod 10;
+            cont := cont + 1;
+        end;
+
+        { Parte descendente de la fila }
+        for ind := (n-2) downto 0 do
+        begin
+            fila[cont] := (n + ind) mod 10;
+            cont := cont + 1;
+        end;
+
+        { Espacios en blanco para centrar }
+        for ind := 1 to (10 - n) do
+        begin
+            write(' ');
+        end;
+
+        { Imprimir fila completa }
+        for ind := 0 to (cont - 1) do
+        begin
+            write(fila[ind]);
+        end;
+
+        writeln;
+    end;
+    readln;
+end.
